@@ -4,7 +4,7 @@ https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/C2OTH9
 
 опрос произведён Институтом проблем правоприменения при ЕУ СПб
 
-* [учебный ноутбук для программистов на Python](https://dyakonov.org/ag/)
+* [учебный ноутбук для программистов на Python](code_victim_visualization.ipynb)
     показана визуализация данных опроса, библиотека и код могут использоваться и для других табличных данных
-* [библиотека для визуализации отпроса (.py)](https://dyakonov.org/ag/)
-* [технический отчёт](https://dyakonov.org/ag/)
+* [библиотека для визуализации отпроса (.py)](dj_poollib.py)
+* [технический отчёт](victimTO__byDyakonov.pdf)
