@@ -102,3 +102,38 @@ def show_confusion_matrix(cm):
     df.index = [r'$y=0$', r'$y=1$']
     df.columns = [r'$a=0$', r'$a=1$']
     return (df)
+    
+def show_scatter(f, g, y, size=20, figsize=(5, 4.5), eps=0.2, random=True,
+                 xlabel='признак 1', ylabel='признак 2', lims=None, newfig=True,
+                class1 = 'класс 1', class0='класс 0'):
+    """
+    показать диаграмму рассеивания
+    """
+    if newfig:
+        fg = plt.figure(figsize=figsize)
+    if random:
+        # для легенды
+        plt.scatter([], [], size, c='#000099', label=class1, edgecolors='white', linewidth=0.8)
+        plt.scatter([], [], size, marker='s', c='#FF9999', label=class0, edgecolors='black', linewidth=0.5)
+        for i in range(len(y)):
+            if y[i]>0:
+                plt.scatter([f[i]], [g[i]], size, c='#000099', edgecolors='white', linewidth=0.8)
+            else:
+                plt.scatter([f[i]], [g[i]], size, marker='s', c='#FF9999', edgecolors='black', linewidth=0.5)
+                
+    else:
+        plt.scatter(f[y > 0], g[y > 0], size, c='#000099', label=class1, edgecolors='white', linewidth=0.8)
+        plt.scatter(f[y <= 0], g[y <=0 ], size, marker='s', c='#FF9999', label=class0, edgecolors='black', linewidth=0.5)
+    # plt.plot([],[],'k', label='модель')
+    if lims is None:
+        plt.xlim([min(f) - eps, max(f) + eps])
+        plt.ylim([min(g) - eps, max(g) + eps])
+    else:
+        plt.xlim(lims[0])
+        plt.ylim(lims[1])
+    plt.legend(loc=(1,0))
+    plt.grid(lw=2)
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    if newfig:
+        return fg    
