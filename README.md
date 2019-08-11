@@ -10,3 +10,4 @@ https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/C2OTH9
 * [технический отчёт](victimTO__byDyakonov.pdf)
 
 на основе данного технического отчёта сделан [тест](https://forms.gle/QRcF2nt3D25iMmez7)
+* [тест с правильными ответами](ТЕСТ(Дьяконов, виктимизационный опрос).pdf)
